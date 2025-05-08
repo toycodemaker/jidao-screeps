@@ -53,7 +53,7 @@ module.exports.loop = function () {
 
 	if (creep.memory.status === undefined) creep.memory.status = 1;
 	if (creep.memory.status===1){
-		console.log(source.pos);
+		//console.log(source.pos);
 		if(creep.harvest(source ) === ERR_NOT_IN_RANGE) {
 			creep.moveTo(source , 
 						 {visualizePathStyle: {stroke: '#ffffff'}});
