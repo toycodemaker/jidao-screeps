@@ -22,5 +22,5 @@ _(我很喜欢用vim来编写代码，功能可配置性很高，或者说可玩
 
 ***
 #### 如果有人也是一样的在玩这个游戏，我希望能够与之相互交流，能够得到些指导（我真的很菜）
-![](https://raw.githubusercontent.com/toycodemaker/picture/main/game-screeps.jpeg)
+![](https://raw.githubusercontent.com/toycodemaker/picture/main/game-screeps.jpeg)  
 _注：这个图是我网上找的_
