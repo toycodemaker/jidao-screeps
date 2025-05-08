@@ -1,3 +1,4 @@
+//这只是一个用来测试TS及其补全在screeps下使用情况的代码文件
 function save_creep(room:Room, creep:Creep){
 	let id:Id<Creep> = creep.id;
 	let name:string = creep.name;
