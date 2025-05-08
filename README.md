@@ -12,8 +12,8 @@
 在我刚开始这一款游戏的时候，因为用的是JavaSript，而我对此并不熟悉加之动态类型语言容易出现类型相关的错误，写的脚本往往需要很多时间来调试，直到耐心耗尽。  
 前几天，我花费了几个小时来配置我的**vim**，来提供代码补全功能，同时也通过**TypeSript**来提供静态类型检查，很快我用**TypeScript**写出了一个十分基础的脚本来验证可行性（就是目前的储存库当中的这个，包含了类型声明等相关文件）。  
 _(我很喜欢用vim来编写代码，功能可配置性很高，或者说可玩性高)_  
-![vim screenshot]("./doc/pic/vim1.png" "vim screemshot")
-![vim screenshot]("./doc/pic/vim2.png" "vim screemshot")
+![vim screenshot]("https://raw.githubusercontent.com/toycodemaker/picture/refs/heads/main/jidao-screeps/vim1.png" "vim screemshot")
+![vim screenshot]("https://raw.githubusercontent.com/toycodemaker/picture/refs/heads/main/jidao-screeps/vim2.png" "vim screemshot")
 
 ***
 ## 未来计划
