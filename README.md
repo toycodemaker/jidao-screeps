@@ -1,7 +1,7 @@
 # jidao-screeps
 我的[screeps](https://screeps.com)代码储存库（我代码不咋滴）  
 
-![](https://raw.githubusercontent.com/toycodemaker/picture/main/screeps2.jpg)
+![](https://raw.githubusercontent.com/toycodemaker/picture/main/screeps3.png)
 
 ## 缘起
 去年年底的时候了解到了这个游戏，一个用JavaScript脚本来控制游戏中的角色的**RTS游戏**
