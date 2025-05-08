@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.15.12",
+    "@types/screeps": "^3.3.8"
+  }
+}
