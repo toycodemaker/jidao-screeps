@@ -1,5 +1,6 @@
 # jidao-screeps
-我的screeps代码储存库（我代码不咋滴）
+我的[screeps](https://screeps.com)代码储存库（我代码不咋滴）
+![](https://raw.githubusercontent.com/toycodemaker/picture/main/screeps2.jpg)
 
 ## 缘起
 去年年底的时候了解到了这个游戏，一个用JavaScript脚本来控制游戏中的角色的**RTS游戏**
@@ -11,9 +12,9 @@
 ## 经历
 在我刚开始这一款游戏的时候，因为用的是JavaSript，而我对此并不熟悉加之动态类型语言容易出现类型相关的错误，写的脚本往往需要很多时间来调试，直到耐心耗尽。  
 前几天，我花费了几个小时来配置我的**vim**，来提供代码补全功能，同时也通过**TypeSript**来提供静态类型检查，很快我用**TypeScript**写出了一个十分基础的脚本来验证可行性（就是目前的储存库当中的这个，包含了类型声明等相关文件）。  
+![](https://raw.githubusercontent.com/toycodemaker/picture/main/vim1.png)
 _(我很喜欢用vim来编写代码，功能可配置性很高，或者说可玩性高)_  
-![vim screenshot]("https://raw.githubusercontent.com/toycodemaker/picture/refs/heads/main/jidao-screeps/vim1.png" "vim screemshot")
-![vim screenshot]("https://raw.githubusercontent.com/toycodemaker/picture/refs/heads/main/jidao-screeps/vim2.png" "vim screemshot")
+![](https://raw.githubusercontent.com/toycodemaker/picture/main/vim2.png)  
 
 ***
 ## 未来计划
@@ -22,3 +23,4 @@ _(我很喜欢用vim来编写代码，功能可配置性很高，或者说可玩
 
 ***
 #### 如果有人也是一样的在玩这个游戏，我希望能够与之相互交流，能够得到些指导（我真的很菜）
+![](https://raw.githubusercontent.com/toycodemaker/picture/main/game-screeps.jpeg)
