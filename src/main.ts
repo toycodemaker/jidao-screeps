@@ -1,5 +1,5 @@
-//这只是一个用来测试TS及其补全在screeps下使用情况的代码文件
-//改一哈啊
+//这是用来测试能否使用ts来开发screeps的
+//现在看起来是可以的
 function save_creep(room:Room, creep:Creep){
 	let id:Id<Creep> = creep.id;
 	let name:string = creep.name;
@@ -9,39 +9,53 @@ function save_creep(room:Room, creep:Creep){
 	room.memory.con_creep[name] = id;
 }
 
-function get_creep(room:Room, name:string):Creep|null{
-	if (!room.memory.con_creep) return null;
-	let id = room.memory.con_creep[name];
-	let creep = Game.getObjectById(id);
-	if (creep === null) {
+function get_creep(room:Room, name:string):Creep{
+	let gcreep;
+	if (room.memory.con_creep === undefined){
+		gcreep = null;
+	}
+	else{
+		let id = room.memory.con_creep[name];
+		gcreep = Game.getObjectById(id);
+	}
+
+	let creep:Creep;
+	if (gcreep === null) {
 		let spawn = Game.spawns["s1"];
 		spawn.spawnCreep( [WORK, CARRY, MOVE], 'harv1' );
 		console.log("creat a harvester at ",Game.time);
 		creep = Game.creeps["harv1"];
 		save_creep(spawn.room, creep)
 	}
+	else creep = gcreep;
 	return creep;
 }
 
 module.exports.loop = function () {
 	let spawn = Game.spawns["s1"];
 
-    var gcreep = get_creep(spawn.room, "harv1");
-	let creep:Creep;
-	if (gcreep === null){
-		spawn.spawnCreep( [WORK, CARRY, MOVE], 'harv1' );
-		console.log("creat a harvester at ",Game.time);
-		creep = Game.creeps["harv1"];
-		save_creep(spawn.room, creep)
-	}
-	else creep = gcreep;
+    let creep:Creep = get_creep(spawn.room, "harv1");
 
 	//升级控制器
+	if (creep.memory.srcp === undefined){
+		console.log("shit");
+		var sources:Source[] = creep.room.find(FIND_SOURCES);
+		creep.memory.srcp = sources[0].id;
+	}
+	let gsource = Game.getObjectById(creep.memory.srcp);
+	let source:Source;
+	if (gsource === null){
+		console.log("no");
+		var sources:Source[] = creep.room.find(FIND_SOURCES);
+		source = sources[0];
+	}
+	else source = gsource;
+
 	if (creep.memory.status === undefined) creep.memory.status = 1;
 	if (creep.memory.status===1){
-		var sources:Source[] = creep.room.find(FIND_SOURCES);
-		if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
-			creep.moveTo(sources[0], 
+		console.log(source.pos);
+		if(creep.harvest(source ) === ERR_NOT_IN_RANGE) {
+			creep.moveTo(source , 
 						 {visualizePathStyle: {stroke: '#ffffff'}});
 		}
 		if (creep.store.getFreeCapacity() === 0) creep.memory.status = 0;

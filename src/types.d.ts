@@ -4,4 +4,5 @@ interface RoomMemory{
 
 interface CreepMemory{
 	status:number;
+	srcp:Id<Source>
 }
